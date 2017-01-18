@@ -16,9 +16,9 @@ namespace Ponto
     {
         static void Main(string [] args)
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Telas.TelaPrincipal());
 
             Configuration configuracao = new Configuration();
             configuracao.Configure();

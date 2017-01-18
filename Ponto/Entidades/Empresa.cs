@@ -9,7 +9,7 @@ namespace Ponto.Entidades
     public class Empresa
     {
         public virtual int Id { get; set; }
-        public virtual string RazaoSocial { get; set; }
+        public virtual string Razaosocial { get; set; }
         public virtual string Cnpj { get; set; }
         public virtual string Ie { get; set; }
         public virtual string Endereco { get; set; }

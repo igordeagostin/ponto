@@ -11,3 +11,4 @@ E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.
 E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.exe
 E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.pdb
 E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\hibernate.cfg.xml
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.Telas.TelaPrincipal.resources

@@ -13,6 +13,6 @@
     <property name="Municipio"/>
     <property name="Uf"/>
     <property name="Cep"/>
-    <property name="Logo"/>
+    <property name="Logo" column="Logo" type="binary" />
   </class>
 </hibernate-mapping>
