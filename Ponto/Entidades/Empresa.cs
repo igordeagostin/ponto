@@ -18,6 +18,6 @@ namespace Ponto.Entidades
         public virtual string Municipio { get; set; }
         public virtual string Uf { get; set; }
         public virtual string Cep { get; set; }
-        public virtual byte[] logo { get; set; }
+        public virtual byte[] Logo { get; set; }
     }
 }

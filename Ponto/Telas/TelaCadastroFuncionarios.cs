@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ponto.Controllers;
+using Ponto.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,14 +19,25 @@ namespace Ponto.Telas
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            Funcionario funcionario = new Funcionario();
+            funcionario.Nome = textBoxNome.Text;
+            funcionario.Senha = textBoxSenha.Text;
+            funcionario.Cpf = textBoxCPF.Text;
 
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
+            FuncionariosController funcionarioController = new FuncionariosController();
+            try
+            {
+                funcionarioController.addFuncionario(funcionario);
+                MessageBox.Show("Funcionário cadastrado com sucesso!");
+                Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar Funcionário, erro: " + ex);
+            }
+            
         }
     }
 }

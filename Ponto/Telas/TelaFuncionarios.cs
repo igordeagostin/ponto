@@ -1,4 +1,7 @@
-﻿using System;
+﻿using LojaWeb.DAO;
+using NHibernate;
+using Ponto.Infra;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,42 @@ namespace Ponto.Telas
         public TelaFuncionarios()
         {
             InitializeComponent();
+            configuraDataGridView();
+            ISession session = NHibernateHelper.AbreSession();
+            dataGridViewFuncionarios.DataSource = session.CreateQuery("from Funcionario").List();
+        }
+
+        private void buttonIncuirFuncionario_Click(object sender, EventArgs e)
+        {
+            TelaCadastroFuncionarios telaAddFuncionarios = new TelaCadastroFuncionarios();
+            telaAddFuncionarios.Show();
+        }
+
+        public void configuraDataGridView()
+        {
+            // Renomeia as colunas do DataGridView
+
+            dataGridViewFuncionarios.Columns[0].HeaderText = "ID";
+            dataGridViewFuncionarios.Columns[1].HeaderText = "NOME";
+            dataGridViewFuncionarios.Columns[2].HeaderText = "CPF";
+            dataGridViewFuncionarios.Columns[3].HeaderText = "SENHA";
+            dataGridViewFuncionarios.Columns[4].HeaderText = "FOTO";
+            dataGridViewFuncionarios.Columns[5].HeaderText = "C.H. DIÁRIA";
+            dataGridViewFuncionarios.Columns[6].HeaderText = "C.H. SEMANAL";
+            dataGridViewFuncionarios.Columns[7].HeaderText = "ADMISSÃO";
+            dataGridViewFuncionarios.Columns[8].HeaderText = "FUNÇÃO";
+            dataGridViewFuncionarios.Columns[9].HeaderText = "DEPARTAMENTO";
+            dataGridViewFuncionarios.Columns[10].HeaderText = "HISTÓRICOS";
+
+            //  Tamanho das colunas
+
+            //dataGridViewFuncionarios.Columns[0].Width = 250;
+            //dataGridViewFuncionarios.Columns[1].Width = 100;
+
+            // Oculta colunas desnecessárias
+
+            dataGridViewFuncionarios.Columns[10].Visible = false;
+
         }
     }
 }

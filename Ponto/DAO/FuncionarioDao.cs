@@ -15,7 +15,6 @@ namespace LojaWeb.DAO
         {
             this.session = session;
         }
-
         public void Adiciona(Funcionario funcionario)
         {
             ITransaction transacao = session.BeginTransaction();
@@ -32,6 +31,14 @@ namespace LojaWeb.DAO
         public void Atualiza(Funcionario funcionario)
         {
             session.Merge(funcionario);
+        }
+
+        public IList<Funcionario> Lista()
+        {
+            String hql = "from Funcionario";
+            IQuery query = session.CreateQuery(hql);
+            IList<Funcionario> funcionarios = query.List<Funcionario>();
+            return query.List<Funcionario>();
         }
     }
 }

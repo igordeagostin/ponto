@@ -16,5 +16,11 @@ namespace Ponto.Telas
         {
             InitializeComponent();
         }
+
+        private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaFuncionarios telaFuncionarios = new TelaFuncionarios();
+            telaFuncionarios.Show();
+        }
     }
 }

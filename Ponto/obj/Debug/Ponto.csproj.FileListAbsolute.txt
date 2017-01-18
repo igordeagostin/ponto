@@ -12,3 +12,9 @@ E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.
 E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.pdb
 E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\hibernate.cfg.xml
 E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.Telas.TelaPrincipal.resources
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\DevExpress.Data.v16.1.dll
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\DevExpress.Utils.v16.1.dll
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\DevExpress.Data.v16.1.xml
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\DevExpress.Utils.v16.1.xml
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.Telas.TelaCadastroFuncionarios.resources
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.Telas.TelaFuncionarios.resources

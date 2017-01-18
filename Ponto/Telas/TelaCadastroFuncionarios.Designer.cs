@@ -38,12 +38,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.textBoxCPF = new System.Windows.Forms.TextBox();
+            this.textBoxCHDiaria = new System.Windows.Forms.TextBox();
+            this.textBoxSenha = new System.Windows.Forms.TextBox();
+            this.textBoxAdmissao = new System.Windows.Forms.TextBox();
+            this.textBoxSemanal = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -68,7 +68,6 @@
             this.label2.Size = new System.Drawing.Size(120, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Funcionários";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -133,48 +132,47 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Foto:";
             // 
-            // textBox1
+            // textBoxNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBoxNome.Location = new System.Drawing.Point(154, 72);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(209, 20);
+            this.textBoxNome.TabIndex = 9;
             // 
-            // textBox2
+            // textBoxCPF
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 20);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBoxCPF.Location = new System.Drawing.Point(154, 103);
+            this.textBoxCPF.Name = "textBoxCPF";
+            this.textBoxCPF.Size = new System.Drawing.Size(209, 20);
+            this.textBoxCPF.TabIndex = 10;
             // 
-            // textBox3
+            // textBoxCHDiaria
             // 
-            this.textBox3.Location = new System.Drawing.Point(154, 173);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(209, 20);
-            this.textBox3.TabIndex = 12;
+            this.textBoxCHDiaria.Location = new System.Drawing.Point(154, 173);
+            this.textBoxCHDiaria.Name = "textBoxCHDiaria";
+            this.textBoxCHDiaria.Size = new System.Drawing.Size(209, 20);
+            this.textBoxCHDiaria.TabIndex = 12;
             // 
-            // textBox4
+            // textBoxSenha
             // 
-            this.textBox4.Location = new System.Drawing.Point(154, 138);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(209, 20);
-            this.textBox4.TabIndex = 11;
+            this.textBoxSenha.Location = new System.Drawing.Point(154, 138);
+            this.textBoxSenha.Name = "textBoxSenha";
+            this.textBoxSenha.Size = new System.Drawing.Size(209, 20);
+            this.textBoxSenha.TabIndex = 11;
             // 
-            // textBox5
+            // textBoxAdmissao
             // 
-            this.textBox5.Location = new System.Drawing.Point(154, 245);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(209, 20);
-            this.textBox5.TabIndex = 14;
+            this.textBoxAdmissao.Location = new System.Drawing.Point(154, 245);
+            this.textBoxAdmissao.Name = "textBoxAdmissao";
+            this.textBoxAdmissao.Size = new System.Drawing.Size(209, 20);
+            this.textBoxAdmissao.TabIndex = 14;
             // 
-            // textBox6
+            // textBoxSemanal
             // 
-            this.textBox6.Location = new System.Drawing.Point(154, 207);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(209, 20);
-            this.textBox6.TabIndex = 13;
+            this.textBoxSemanal.Location = new System.Drawing.Point(154, 207);
+            this.textBoxSemanal.Name = "textBoxSemanal";
+            this.textBoxSemanal.Size = new System.Drawing.Size(209, 20);
+            this.textBoxSemanal.TabIndex = 13;
             // 
             // button1
             // 
@@ -193,6 +191,7 @@
             this.button2.TabIndex = 16;
             this.button2.Text = "Salvar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // TelaCadastroFuncionarios
             // 
@@ -201,12 +200,12 @@
             this.ClientSize = new System.Drawing.Size(375, 372);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxAdmissao);
+            this.Controls.Add(this.textBoxSemanal);
+            this.Controls.Add(this.textBoxCHDiaria);
+            this.Controls.Add(this.textBoxSenha);
+            this.Controls.Add(this.textBoxCPF);
+            this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -235,12 +234,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxNome;
+        private System.Windows.Forms.TextBox textBoxCPF;
+        private System.Windows.Forms.TextBox textBoxCHDiaria;
+        private System.Windows.Forms.TextBox textBoxSenha;
+        private System.Windows.Forms.TextBox textBoxAdmissao;
+        private System.Windows.Forms.TextBox textBoxSemanal;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }
