@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Ponto" namespace="Ponto.Entidades">
+  <class name="Funcionario">
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="Nome"/>
+    <property name="Cpf"/>
+    <property name="Senha"/>
+    <property name="Foto"/>
+    <property name="CargaHorariaDiaria"/>
+    <property name="CargaHorariaSemanal"/>
+    <property name="Admissao"/>
+
+    <many-to-one name="Funcao" column="FuncaoId" fetch="join"/>
+    <many-to-one name="Departamento" column="DepartamentoId" fetch="join"/>
+
+    <set name="Historicos" fetch="join" inverse="true">
+      <key column="FuncionarioId"/>
+      <one-to-many class="Historico"/>
+    </set>
+  </class>
+</hibernate-mapping>

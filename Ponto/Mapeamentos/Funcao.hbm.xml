@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Ponto" namespace="Ponto.Entidades">
+  <class name="Funcao">
+    <id name="Id">
+      <generator class="identity"/>
+    </id>
+    <property name="Nome"/>
+
+    <set name="Funcionarios" fetch="join" inverse="true">
+      <key column="FuncaoId"/>
+      <one-to-many class="Funcionario "/>
+    </set>
+  </class>
+</hibernate-mapping>

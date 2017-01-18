@@ -1,0 +1,13 @@
+e:\users\igor\documents\visual studio 2015\Projects\Ponto\Ponto\bin\Debug\Ponto.exe.config
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\Ponto.exe
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\Ponto.pdb
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\Iesi.Collections.dll
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\NHibernate.dll
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\Iesi.Collections.xml
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\NHibernate.xml
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.csprojResolveAssemblyReference.cache
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.Properties.Resources.resources
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.csproj.GenerateResource.Cache
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.exe
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.pdb
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\hibernate.cfg.xml
