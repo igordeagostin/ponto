@@ -18,18 +18,29 @@ namespace Ponto.Controllers
             ISession session = NHibernateHelper.AbreSession();
             FuncionarioDao funcionarioDAO = new FuncionarioDao(session);
             funcionarioDAO.Adiciona(funcionario);
+            session.Close();
         }
         public void delFuncionario(Funcionario funcionario)
         {
             ISession session = NHibernateHelper.AbreSession();
             FuncionarioDao funcionarioDAO = new FuncionarioDao(session);
             funcionarioDAO.Remove(funcionario);
+            session.Close();
         }
         public void attFuncionario(Funcionario funcionario)
         {
             ISession session = NHibernateHelper.AbreSession();
             FuncionarioDao funcionarioDAO = new FuncionarioDao(session);
             funcionarioDAO.Atualiza(funcionario);
+            session.Close();
         }
+
+        public Funcionario BuscaPorId(int id)
+        {
+            ISession session = NHibernateHelper.AbreSession();
+            return session.Get<Funcionario>(id);
+            session.Close();
+        }
+
     }
 }

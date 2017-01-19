@@ -15,10 +15,14 @@ namespace LojaWeb.DAO
         {
             this.session = session;
         }
+        public FuncionarioDao()
+        {
+
+        }
         public void Adiciona(Funcionario funcionario)
         {
             ITransaction transacao = session.BeginTransaction();
-            this.session.Save(funcionario);
+            this.session.SaveOrUpdate(funcionario);
             transacao.Commit();
         }
 
@@ -33,6 +37,10 @@ namespace LojaWeb.DAO
             session.Merge(funcionario);
         }
 
+        public Funcionario BuscaPorId(int id)
+        {
+            return this.session.Get<Funcionario>(id);
+        }
         public IList<Funcionario> Lista()
         {
             String hql = "from Funcionario";

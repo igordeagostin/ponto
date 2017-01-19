@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.buttonIncuirFuncionario = new System.Windows.Forms.Button();
             this.dataGridViewFuncionarios = new System.Windows.Forms.DataGridView();
+            this.buttonAlterarFuncionario = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +44,7 @@
             this.admissaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.historicosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonExcluirFuncionario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +83,18 @@
             this.dataGridViewFuncionarios.ReadOnly = true;
             this.dataGridViewFuncionarios.Size = new System.Drawing.Size(813, 307);
             this.dataGridViewFuncionarios.TabIndex = 1;
+            this.dataGridViewFuncionarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFuncionarios_CellClick);
+            this.dataGridViewFuncionarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFuncionarios_CellDoubleClick);
+            // 
+            // buttonAlterarFuncionario
+            // 
+            this.buttonAlterarFuncionario.Location = new System.Drawing.Point(93, 12);
+            this.buttonAlterarFuncionario.Name = "buttonAlterarFuncionario";
+            this.buttonAlterarFuncionario.Size = new System.Drawing.Size(75, 23);
+            this.buttonAlterarFuncionario.TabIndex = 2;
+            this.buttonAlterarFuncionario.Text = "Alterar";
+            this.buttonAlterarFuncionario.UseVisualStyleBackColor = true;
+            this.buttonAlterarFuncionario.Click += new System.EventHandler(this.buttonAlterarFuncionario_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -163,11 +177,23 @@
             // 
             this.funcionarioBindingSource.DataSource = typeof(Ponto.Entidades.Funcionario);
             // 
+            // buttonExcluirFuncionario
+            // 
+            this.buttonExcluirFuncionario.Location = new System.Drawing.Point(174, 12);
+            this.buttonExcluirFuncionario.Name = "buttonExcluirFuncionario";
+            this.buttonExcluirFuncionario.Size = new System.Drawing.Size(75, 23);
+            this.buttonExcluirFuncionario.TabIndex = 3;
+            this.buttonExcluirFuncionario.Text = "Excluir";
+            this.buttonExcluirFuncionario.UseVisualStyleBackColor = true;
+            this.buttonExcluirFuncionario.Click += new System.EventHandler(this.buttonExcluirFuncionario_Click);
+            // 
             // TelaFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(837, 462);
+            this.Controls.Add(this.buttonExcluirFuncionario);
+            this.Controls.Add(this.buttonAlterarFuncionario);
             this.Controls.Add(this.dataGridViewFuncionarios);
             this.Controls.Add(this.buttonIncuirFuncionario);
             this.Name = "TelaFuncionarios";
@@ -194,5 +220,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn admissaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn historicosDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource funcionarioBindingSource;
+        private System.Windows.Forms.Button buttonAlterarFuncionario;
+        private System.Windows.Forms.Button buttonExcluirFuncionario;
     }
 }

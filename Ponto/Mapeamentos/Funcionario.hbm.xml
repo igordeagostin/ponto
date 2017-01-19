@@ -11,6 +11,8 @@
     <property name="CargaHorariaDiaria"/>
     <property name="CargaHorariaSemanal"/>
     <property name="Admissao"/>
+    <property name="Demissao"/>
+    <property name="Situacao"/>
 
     <many-to-one name="Funcao" column="FuncaoId" fetch="join"/>
     <many-to-one name="Departamento" column="DepartamentoId" fetch="join"/>
