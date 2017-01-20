@@ -11,35 +11,32 @@ using Ponto.Infra;
 namespace Ponto.Controllers
 {
     public class FuncionariosController
-    {    
-        
-        public void addFuncionario(Funcionario funcionario)
+    {
+        FuncionarioDao funcionarioDAO;
+        ISession session;
+        public FuncionariosController()
         {
-            ISession session = NHibernateHelper.AbreSession();
-            FuncionarioDao funcionarioDAO = new FuncionarioDao(session);
+            session = NHibernateHelper.AbreSession();
+            funcionarioDAO = new FuncionarioDao(session);
+        }
+        public void addFuncionario(Funcionario funcionario)
+        {            
             funcionarioDAO.Adiciona(funcionario);
-            session.Close();
         }
         public void delFuncionario(Funcionario funcionario)
         {
-            ISession session = NHibernateHelper.AbreSession();
-            FuncionarioDao funcionarioDAO = new FuncionarioDao(session);
             funcionarioDAO.Remove(funcionario);
-            session.Close();
-        }
-        public void attFuncionario(Funcionario funcionario)
-        {
-            ISession session = NHibernateHelper.AbreSession();
-            FuncionarioDao funcionarioDAO = new FuncionarioDao(session);
-            funcionarioDAO.Atualiza(funcionario);
             session.Close();
         }
 
         public Funcionario BuscaPorId(int id)
-        {
-            ISession session = NHibernateHelper.AbreSession();
+        {            
             return session.Get<Funcionario>(id);
-            session.Close();
+        }
+
+        public IList<Funcionario> Lista()
+        {
+            return funcionarioDAO.Lista();
         }
 
     }

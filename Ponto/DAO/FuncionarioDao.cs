@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Windows.Forms;
 
 namespace LojaWeb.DAO
 {
@@ -22,19 +23,43 @@ namespace LojaWeb.DAO
         public void Adiciona(Funcionario funcionario)
         {
             ITransaction transacao = session.BeginTransaction();
-            this.session.SaveOrUpdate(funcionario);
-            transacao.Commit();
+            try
+            {
+                this.session.SaveOrUpdate(funcionario);
+                transacao.Commit();
+                MessageBox.Show("Funcionário salvo com sucesso!");
+            }catch(Exception ex)
+            {
+                transacao.Rollback();
+                MessageBox.Show("Erro ao cadastrar funcionário!\nErro: " + ex);
+            }
+            finally
+            {
+                this.session.Close();
+            }
+            
         }
 
         public void Remove(Funcionario funcionario)
         {
             ITransaction transacao = session.BeginTransaction();
-            this.session.Delete(funcionario);
-        }
-
-        public void Atualiza(Funcionario funcionario)
-        {
-            session.Merge(funcionario);
+            try
+            {
+                this.session.Delete(funcionario);
+                MessageBox.Show("Funcionário excluído com sucesso!");
+                transacao.Commit();
+                
+            }
+            catch (Exception ex)
+            {
+                transacao.Rollback();
+                MessageBox.Show("Erro ao excluir Funcionário!\nErro:" + ex);
+            }
+            finally
+            {
+                this.session.Close();
+            }
+           
         }
 
         public Funcionario BuscaPorId(int id)

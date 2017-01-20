@@ -33,8 +33,8 @@ namespace Ponto.Telas
 
         public void configuraDataGridView()
         {
-            ISession session = NHibernateHelper.AbreSession();
-            dataGridViewFuncionarios.DataSource = session.CreateQuery("from Funcionario").List();
+            FuncionariosController funcionarioController = new FuncionariosController();
+            dataGridViewFuncionarios.DataSource = funcionarioController.Lista();
             // Renomeia as colunas do DataGridView
 
             dataGridViewFuncionarios.Columns[0].HeaderText = "ID";
@@ -110,7 +110,7 @@ namespace Ponto.Telas
             MessageBoxButtons.YesNo, MessageBoxIcon.Question)
              == DialogResult.Yes)
             {
-                funcionariosController.delFuncionario(funcionario);
+                    funcionariosController.delFuncionario(funcionario);                
             }
            
             configuraDataGridView();
