@@ -24,8 +24,7 @@ namespace Ponto.Telas
         {
             InitializeComponent();
             id = funcionario.Id;
-            textBoxNome.Text = funcionario.Nome;
-            
+            textBoxNome.Text = funcionario.Nome;             
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,17 +36,8 @@ namespace Ponto.Telas
             funcionario.Cpf = textBoxCPF.Text;
 
             FuncionariosController funcionarioController = new FuncionariosController();
-            try
-            {
-                funcionarioController.addFuncionario(funcionario);
-                MessageBox.Show("Funcionário cadastrado com sucesso!");
-                Close();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Erro ao salvar Funcionário, erro: " + ex);
-            }
-            
+            funcionarioController.addFuncionario(funcionario);
+            Close();
         }
     }
 }

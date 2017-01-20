@@ -10,5 +10,10 @@
      <key column="DepartamentoId"/>
      <one-to-many class="Funcionario"/>
    </set>
+
+    <set name="Funcoes" fetch="join" inverse="true">
+      <key column="DepartamentoId"/>
+      <one-to-many class="Funcao"/>
+    </set>
   </class>
 </hibernate-mapping>

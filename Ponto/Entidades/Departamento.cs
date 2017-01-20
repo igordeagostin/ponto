@@ -11,6 +11,7 @@ namespace Ponto.Entidades
         public virtual int Id { get; set; }
         public virtual string Nome { get; set; }
         public virtual ISet<Funcionario> Funcionarios { get; set; }
+        public virtual ISet<Funcao> Funcoes { get; set; }
 
     }
 }

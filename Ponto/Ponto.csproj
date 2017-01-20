@@ -62,6 +62,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DepartamentoController.cs" />
+    <Compile Include="Controllers\FuncaoController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="DAO\DepartamentoDao.cs" />
     <Compile Include="DAO\EmpresaDao.cs" />
@@ -86,11 +88,23 @@
     <Compile Include="Infra\NHibernateHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas\TelaCadastroDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\TelaCadastroDepartamento.Designer.cs">
+      <DependentUpon>TelaCadastroDepartamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\TelaCadastroFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Telas\TelaCadastroFuncionarios.Designer.cs">
       <DependentUpon>TelaCadastroFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TelaDepartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\TelaDepartamentos.Designer.cs">
+      <DependentUpon>TelaDepartamentos.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaFuncionarios.cs">
       <SubType>Form</SubType>
@@ -114,8 +128,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Telas\TelaCadastroDepartamento.resx">
+      <DependentUpon>TelaCadastroDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaCadastroFuncionarios.resx">
       <DependentUpon>TelaCadastroFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\TelaDepartamentos.resx">
+      <DependentUpon>TelaDepartamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaFuncionarios.resx">
       <DependentUpon>TelaFuncionarios.cs</DependentUpon>
@@ -125,6 +145,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\LojaWeb.DAO.FuncionarioDao.datasource" />
+    <None Include="Properties\DataSources\Ponto.Entidades.Departamento.datasource" />
     <None Include="Properties\DataSources\Ponto.Entidades.Funcionario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

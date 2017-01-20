@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Windows.Forms;
 
 namespace LojaWeb.DAO
 {
@@ -16,22 +17,61 @@ namespace LojaWeb.DAO
             this.session = session;
         }
 
-        public void Adiciona(Funcao funcao)
+        public FuncaoDao()
+        {
+
+        }
+
+        public void SaveOrUpdate(Funcao funcao)
         {
             ITransaction transacao = session.BeginTransaction();
-            this.session.Save(funcao);
-            transacao.Commit();
+            try
+            {
+                this.session.SaveOrUpdate(funcao);
+                transacao.Commit();
+                MessageBox.Show("Função salva com sucesso!");
+            }
+            catch(Exception ex)
+            {
+                transacao.Rollback();
+                MessageBox.Show("Erro ao salvar a Função\nErro: " + ex);
+            }
+            finally
+            {
+                this.session.Close();
+            }
+            
         }
 
         public void Remove(Funcao funcao)
         {
             ITransaction transacao = session.BeginTransaction();
-            this.session.Delete(funcao);
+            try
+            {
+                this.session.Delete(funcao);
+                transacao.Commit();
+                MessageBox.Show("Função excluída com sucesso!");
+            }catch(Exception ex)
+            {
+                transacao.Rollback();
+                MessageBox.Show("Erro ao excluir a Função\nErro:" + ex);
+            }
+            finally
+            {
+                this.session.Close();
+            }
+            
         }
-
-        public void Atualiza(Funcao funcao)
+        public Funcao BuscaPorId(int id)
         {
-            session.Merge(funcao);
+            return this.session.Get<Funcao>(id);
+        }
+        public IList<Funcao> Lista()
+        {
+            String hql = "from Funcao";
+            IQuery query = session.CreateQuery(hql);
+            IList<Funcao> funcionarios = query.List<Funcao>();
+            return query.List<Funcao>();
         }
     }
 }

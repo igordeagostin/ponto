@@ -26,7 +26,6 @@ namespace Ponto.Controllers
         public void delFuncionario(Funcionario funcionario)
         {
             funcionarioDAO.Remove(funcionario);
-            session.Close();
         }
 
         public Funcionario BuscaPorId(int id)

@@ -18,3 +18,5 @@ E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\DevExp
 E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\bin\Debug\DevExpress.Utils.v16.1.xml
 E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.Telas.TelaCadastroFuncionarios.resources
 E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.Telas.TelaFuncionarios.resources
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.Telas.TelaCadastroDepartamento.resources
+E:\Users\Igor\Documents\Visual Studio 2015\Projects\Ponto\Ponto\obj\Debug\Ponto.Telas.TelaDepartamentos.resources
