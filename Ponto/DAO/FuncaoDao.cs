@@ -70,7 +70,13 @@ namespace LojaWeb.DAO
         {
             String hql = "from Funcao";
             IQuery query = session.CreateQuery(hql);
-            IList<Funcao> funcionarios = query.List<Funcao>();
+            //IList<Funcao> funcionarios = query.List<Funcao>();
+            return query.List<Funcao>();
+        }
+        public IList<Funcao> ListaCombo()
+        {
+            String hql = "from Funcao";
+            IQuery query = session.CreateQuery(hql);
             return query.List<Funcao>();
         }
     }

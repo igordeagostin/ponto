@@ -1,6 +1,6 @@
 ﻿namespace Ponto.Telas
 {
-    partial class TelaDepartamentos
+    partial class TelaFuncoes
     {
         /// <summary>
         /// Required designer variable.
@@ -29,46 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridViewDepartamentos = new System.Windows.Forms.DataGridView();
             this.buttonIncluir = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
+            this.dataGridViewFuncoes = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.funcionariosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.funcoesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDepartamentos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
+            this.funcaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncoes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcaoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridViewDepartamentos
-            // 
-            this.dataGridViewDepartamentos.AllowUserToAddRows = false;
-            this.dataGridViewDepartamentos.AllowUserToDeleteRows = false;
-            this.dataGridViewDepartamentos.AutoGenerateColumns = false;
-            this.dataGridViewDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDepartamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nomeDataGridViewTextBoxColumn,
-            this.funcionariosDataGridViewTextBoxColumn,
-            this.funcoesDataGridViewTextBoxColumn});
-            this.dataGridViewDepartamentos.DataSource = this.departamentoBindingSource;
-            this.dataGridViewDepartamentos.Location = new System.Drawing.Point(12, 41);
-            this.dataGridViewDepartamentos.Name = "dataGridViewDepartamentos";
-            this.dataGridViewDepartamentos.ReadOnly = true;
-            this.dataGridViewDepartamentos.Size = new System.Drawing.Size(511, 208);
-            this.dataGridViewDepartamentos.TabIndex = 0;
-            this.dataGridViewDepartamentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDepartamentos_CellClick);
-            this.dataGridViewDepartamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDepartamentos_CellContentClick);
-            this.dataGridViewDepartamentos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDepartamentos_CellDoubleClick);
             // 
             // buttonIncluir
             // 
             this.buttonIncluir.Location = new System.Drawing.Point(12, 12);
             this.buttonIncluir.Name = "buttonIncluir";
             this.buttonIncluir.Size = new System.Drawing.Size(75, 23);
-            this.buttonIncluir.TabIndex = 1;
+            this.buttonIncluir.TabIndex = 0;
             this.buttonIncluir.Text = "Incluir";
             this.buttonIncluir.UseVisualStyleBackColor = true;
             this.buttonIncluir.Click += new System.EventHandler(this.buttonIncluir_Click);
@@ -78,20 +57,36 @@
             this.buttonAlterar.Location = new System.Drawing.Point(93, 12);
             this.buttonAlterar.Name = "buttonAlterar";
             this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAlterar.TabIndex = 2;
+            this.buttonAlterar.TabIndex = 1;
             this.buttonAlterar.Text = "Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
-            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
             // buttonExcluir
             // 
             this.buttonExcluir.Location = new System.Drawing.Point(174, 12);
             this.buttonExcluir.Name = "buttonExcluir";
             this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
-            this.buttonExcluir.TabIndex = 3;
+            this.buttonExcluir.TabIndex = 2;
             this.buttonExcluir.Text = "Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
-            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
+            // 
+            // dataGridViewFuncoes
+            // 
+            this.dataGridViewFuncoes.AllowUserToAddRows = false;
+            this.dataGridViewFuncoes.AllowUserToDeleteRows = false;
+            this.dataGridViewFuncoes.AutoGenerateColumns = false;
+            this.dataGridViewFuncoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFuncoes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
+            this.departamentoDataGridViewTextBoxColumn,
+            this.funcionariosDataGridViewTextBoxColumn});
+            this.dataGridViewFuncoes.DataSource = this.funcaoBindingSource;
+            this.dataGridViewFuncoes.Location = new System.Drawing.Point(12, 41);
+            this.dataGridViewFuncoes.Name = "dataGridViewFuncoes";
+            this.dataGridViewFuncoes.ReadOnly = true;
+            this.dataGridViewFuncoes.Size = new System.Drawing.Size(430, 208);
+            this.dataGridViewFuncoes.TabIndex = 3;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -107,6 +102,13 @@
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // departamentoDataGridViewTextBoxColumn
+            // 
+            this.departamentoDataGridViewTextBoxColumn.DataPropertyName = "Departamento";
+            this.departamentoDataGridViewTextBoxColumn.HeaderText = "Departamento";
+            this.departamentoDataGridViewTextBoxColumn.Name = "departamentoDataGridViewTextBoxColumn";
+            this.departamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // funcionariosDataGridViewTextBoxColumn
             // 
             this.funcionariosDataGridViewTextBoxColumn.DataPropertyName = "Funcionarios";
@@ -114,45 +116,38 @@
             this.funcionariosDataGridViewTextBoxColumn.Name = "funcionariosDataGridViewTextBoxColumn";
             this.funcionariosDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // funcoesDataGridViewTextBoxColumn
+            // funcaoBindingSource
             // 
-            this.funcoesDataGridViewTextBoxColumn.DataPropertyName = "Funcoes";
-            this.funcoesDataGridViewTextBoxColumn.HeaderText = "Funcoes";
-            this.funcoesDataGridViewTextBoxColumn.Name = "funcoesDataGridViewTextBoxColumn";
-            this.funcoesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.funcaoBindingSource.DataSource = typeof(Ponto.Entidades.Funcao);
             // 
-            // departamentoBindingSource
-            // 
-            this.departamentoBindingSource.DataSource = typeof(Ponto.Entidades.Departamento);
-            // 
-            // TelaDepartamentos
+            // TelaFuncoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 261);
+            this.ClientSize = new System.Drawing.Size(454, 261);
+            this.Controls.Add(this.dataGridViewFuncoes);
             this.Controls.Add(this.buttonExcluir);
             this.Controls.Add(this.buttonAlterar);
             this.Controls.Add(this.buttonIncluir);
-            this.Controls.Add(this.dataGridViewDepartamentos);
-            this.Name = "TelaDepartamentos";
+            this.Name = "TelaFuncoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TelaDepartamntos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDepartamentos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
+            this.Text = "TelaFuncoes";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncoes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcaoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewDepartamentos;
         private System.Windows.Forms.Button buttonIncluir;
         private System.Windows.Forms.Button buttonAlterar;
         private System.Windows.Forms.Button buttonExcluir;
+        private System.Windows.Forms.DataGridView dataGridViewFuncoes;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn departamentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn funcionariosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn funcoesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource departamentoBindingSource;
+        private System.Windows.Forms.BindingSource funcaoBindingSource;
     }
 }

@@ -76,12 +76,14 @@
             this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
             this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.departamentosToolStripMenuItem.Text = "Departamentos";
+            this.departamentosToolStripMenuItem.Click += new System.EventHandler(this.departamentosToolStripMenuItem_Click);
             // 
             // funçõesToolStripMenuItem
             // 
             this.funçõesToolStripMenuItem.Name = "funçõesToolStripMenuItem";
             this.funçõesToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.funçõesToolStripMenuItem.Text = "Funções";
+            this.funçõesToolStripMenuItem.Click += new System.EventHandler(this.funçõesToolStripMenuItem_Click);
             // 
             // feriadoToolStripMenuItem
             // 

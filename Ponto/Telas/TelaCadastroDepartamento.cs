@@ -14,13 +14,16 @@ namespace Ponto.Telas
 {
     public partial class TelaCadastroDepartamento : Form
     {
+        int id;
         public TelaCadastroDepartamento()
         {
             InitializeComponent();
         }
         public TelaCadastroDepartamento(Departamento departamento)
         {
-
+            InitializeComponent();
+            id = departamento.Id;
+            textBoxNome.Text = departamento.Nome;
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -28,6 +31,7 @@ namespace Ponto.Telas
             DepartamentoController departamentoController = new DepartamentoController();
             Departamento departamento = new Departamento();
 
+            departamento.Id = id;
             departamento.Nome = textBoxNome.Text;
             departamentoController.SaveOrUpdate(departamento);
             Close();

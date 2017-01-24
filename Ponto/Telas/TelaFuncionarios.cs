@@ -104,16 +104,19 @@ namespace Ponto.Telas
 
         private void buttonExcluirFuncionario_Click(object sender, EventArgs e)
         {
-            FuncionariosController funcionariosController = new FuncionariosController();
-            Funcionario funcionario = funcionariosController.BuscaPorId(id);
-            if (MessageBox.Show("Tem certeza que deseja excluir?", "Ponto",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-             == DialogResult.Yes)
+            if (verificaId())
             {
-                    funcionariosController.delFuncionario(funcionario);                
+                FuncionariosController funcionariosController = new FuncionariosController();
+                Funcionario funcionario = funcionariosController.BuscaPorId(id);
+                if (MessageBox.Show("Tem certeza que deseja excluir?", "Ponto",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                 == DialogResult.Yes)
+                {
+                    funcionariosController.delFuncionario(funcionario);
+                }
+
+                configuraDataGridView();
             }
-           
-            configuraDataGridView();
         }
     }
 }

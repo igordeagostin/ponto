@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.buttonIncuirFuncionario = new System.Windows.Forms.Button();
             this.dataGridViewFuncionarios = new System.Windows.Forms.DataGridView();
-            this.buttonAlterarFuncionario = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +43,7 @@
             this.admissaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.historicosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonAlterarFuncionario = new System.Windows.Forms.Button();
             this.buttonExcluirFuncionario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncionarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
@@ -85,16 +85,6 @@
             this.dataGridViewFuncionarios.TabIndex = 1;
             this.dataGridViewFuncionarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFuncionarios_CellClick);
             this.dataGridViewFuncionarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFuncionarios_CellDoubleClick);
-            // 
-            // buttonAlterarFuncionario
-            // 
-            this.buttonAlterarFuncionario.Location = new System.Drawing.Point(93, 12);
-            this.buttonAlterarFuncionario.Name = "buttonAlterarFuncionario";
-            this.buttonAlterarFuncionario.Size = new System.Drawing.Size(75, 23);
-            this.buttonAlterarFuncionario.TabIndex = 2;
-            this.buttonAlterarFuncionario.Text = "Alterar";
-            this.buttonAlterarFuncionario.UseVisualStyleBackColor = true;
-            this.buttonAlterarFuncionario.Click += new System.EventHandler(this.buttonAlterarFuncionario_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -177,6 +167,16 @@
             // 
             this.funcionarioBindingSource.DataSource = typeof(Ponto.Entidades.Funcionario);
             // 
+            // buttonAlterarFuncionario
+            // 
+            this.buttonAlterarFuncionario.Location = new System.Drawing.Point(93, 12);
+            this.buttonAlterarFuncionario.Name = "buttonAlterarFuncionario";
+            this.buttonAlterarFuncionario.Size = new System.Drawing.Size(75, 23);
+            this.buttonAlterarFuncionario.TabIndex = 2;
+            this.buttonAlterarFuncionario.Text = "Alterar";
+            this.buttonAlterarFuncionario.UseVisualStyleBackColor = true;
+            this.buttonAlterarFuncionario.Click += new System.EventHandler(this.buttonAlterarFuncionario_Click);
+            // 
             // buttonExcluirFuncionario
             // 
             this.buttonExcluirFuncionario.Location = new System.Drawing.Point(174, 12);
@@ -197,6 +197,7 @@
             this.Controls.Add(this.dataGridViewFuncionarios);
             this.Controls.Add(this.buttonIncuirFuncionario);
             this.Name = "TelaFuncionarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaFuncionarios";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncionarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();

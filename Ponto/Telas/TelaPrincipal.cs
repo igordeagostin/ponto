@@ -20,7 +20,19 @@ namespace Ponto.Telas
         private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TelaFuncionarios telaFuncionarios = new TelaFuncionarios();
-            telaFuncionarios.Show();
+            telaFuncionarios.ShowDialog();
+        }
+
+        private void departamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaDepartamentos telaDepartamentos = new TelaDepartamentos();
+            telaDepartamentos.ShowDialog();
+        }
+
+        private void funçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaFuncoes telaFuncoes = new TelaFuncoes();
+            telaFuncoes.ShowDialog();
         }
     }
 }

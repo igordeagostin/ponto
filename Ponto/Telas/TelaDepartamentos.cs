@@ -1,4 +1,5 @@
 ﻿using Ponto.Controllers;
+using Ponto.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,15 +14,18 @@ namespace Ponto.Telas
 {
     public partial class TelaDepartamentos : Form
     {
+        int id;
         public TelaDepartamentos()
         {
             InitializeComponent();
+            configuraDataGridView();
         }
 
         private void buttonIncluir_Click(object sender, EventArgs e)
         {
             TelaCadastroDepartamento tela = new TelaCadastroDepartamento();
             tela.ShowDialog();
+            configuraDataGridView();
         }
 
         public void configuraDataGridView()
@@ -37,7 +41,68 @@ namespace Ponto.Telas
             dataGridViewDepartamentos.Columns[3].HeaderText = "FUNÇÕES";
 
             dataGridViewDepartamentos.Columns[2].Visible = false;
-            //dataGridViewDepartamentos.Columns[3].Visible = false;
+            dataGridViewDepartamentos.Columns[3].Visible = false;
         }
+
+        private void dataGridViewDepartamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            if (verificaId())
+            {
+                DepartamentoController departamentosController = new DepartamentoController();
+                Departamento departamento = departamentosController.BuscaPorId(id);
+                var form = new TelaCadastroDepartamento(departamento);
+                form.ShowDialog();
+                configuraDataGridView();
+            }
+        }
+        public bool verificaId()
+        {
+            if (id > 0)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Você deve selecionar um registro para continuar!");
+                return false;
+            }
+        }
+
+        private void dataGridViewDepartamentos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = Convert.ToInt32(dataGridViewDepartamentos["ID", e.RowIndex].Value);
+            DepartamentoController departamentosController = new DepartamentoController();
+            Departamento departamento = departamentosController.BuscaPorId(id);
+            var form = new TelaCadastroDepartamento(departamento);
+            form.ShowDialog();
+            configuraDataGridView();
+        }
+
+        private void dataGridViewDepartamentos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = Convert.ToInt32(dataGridViewDepartamentos["ID", e.RowIndex].Value);
+        }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            if (verificaId())
+            {
+                DepartamentoController departamentosController = new DepartamentoController();
+                Departamento departamento = departamentosController.BuscaPorId(id);
+                if (MessageBox.Show("Tem certeza que deseja excluir?", "Ponto",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                 == DialogResult.Yes)
+                {
+                    departamentosController.Remove(departamento);
+                }
+
+                configuraDataGridView();
+            }
+        }
+    }
     }
