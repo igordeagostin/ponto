@@ -34,9 +34,25 @@ namespace Ponto.Telas
         public void configuraDataGridView()
         {
             FuncionariosController funcionarioController = new FuncionariosController();
-            dataGridViewFuncionarios.DataSource = funcionarioController.Lista();
-            // Renomeia as colunas do DataGridView
 
+                var lista = funcionarioController.Lista().Select(funcionario => new
+                {
+                    Id = funcionario.Id,
+                    Nome = funcionario.Nome,
+                    Cpf = funcionario.Cpf,
+                    Senha = funcionario.Senha,
+                    Foto = funcionario.Foto,
+                    CargaHorariaDiaria = funcionario.CargaHorariaDiaria,
+                    CargaHorariaSemanal = funcionario.CargaHorariaSemanal,
+                    Admissao = funcionario.Admissao,
+                    Demissao = funcionario.Demissao,
+                    Situacao = funcionario.Situacao,
+                    Funcao = funcionario.Funcao.Nome,
+                    Departamento = funcionario.Departamento.Nome,
+                }).ToList();
+
+                dataGridViewFuncionarios.DataSource = lista;
+                // Renomeia as colunas do DataGridView
             dataGridViewFuncionarios.Columns[0].HeaderText = "ID";
             dataGridViewFuncionarios.Columns[0].Name = "ID";
             dataGridViewFuncionarios.Columns[1].HeaderText = "NOME";
@@ -46,6 +62,8 @@ namespace Ponto.Telas
             dataGridViewFuncionarios.Columns[5].HeaderText = "C.H. DIÁRIA";
             dataGridViewFuncionarios.Columns[6].HeaderText = "C.H. SEMANAL";
             dataGridViewFuncionarios.Columns[7].HeaderText = "ADMISSÃO";
+            dataGridViewFuncionarios.Columns[7].HeaderText = "DEMISSÃO";
+            dataGridViewFuncionarios.Columns[7].HeaderText = "SITUAÇÃO";
             dataGridViewFuncionarios.Columns[8].HeaderText = "FUNÇÃO";
             dataGridViewFuncionarios.Columns[9].HeaderText = "DEPARTAMENTO";
             dataGridViewFuncionarios.Columns[10].HeaderText = "HISTÓRICOS";

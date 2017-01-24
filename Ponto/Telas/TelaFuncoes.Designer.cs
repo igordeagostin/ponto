@@ -60,6 +60,7 @@
             this.buttonAlterar.TabIndex = 1;
             this.buttonAlterar.Text = "Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
             // buttonExcluir
             // 
@@ -69,6 +70,7 @@
             this.buttonExcluir.TabIndex = 2;
             this.buttonExcluir.Text = "Excluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // dataGridViewFuncoes
             // 
@@ -87,6 +89,8 @@
             this.dataGridViewFuncoes.ReadOnly = true;
             this.dataGridViewFuncoes.Size = new System.Drawing.Size(430, 208);
             this.dataGridViewFuncoes.TabIndex = 3;
+            this.dataGridViewFuncoes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFuncoes_CellClick);
+            this.dataGridViewFuncoes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFuncoes_CellDoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 

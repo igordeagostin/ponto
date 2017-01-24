@@ -34,6 +34,9 @@ namespace Ponto.Telas
             funcionario.Nome = textBoxNome.Text;
             funcionario.Senha = textBoxSenha.Text;
             funcionario.Cpf = textBoxCPF.Text;
+            funcionario.CargaHorariaDiaria = float.Parse(textBoxCHDiaria.Text);
+            funcionario.CargaHorariaSemanal = float.Parse(textBoxSemanal.Text);
+            funcionario.Admissao = Convert.ToDateTime(textBoxAdmissao.Text);
 
             FuncionariosController funcionarioController = new FuncionariosController();
             funcionarioController.addFuncionario(funcionario);
