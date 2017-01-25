@@ -224,6 +224,7 @@
             // 
             // comboBoxDepartamentos
             // 
+            this.comboBoxDepartamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDepartamentos.FormattingEnabled = true;
             this.comboBoxDepartamentos.Location = new System.Drawing.Point(418, 215);
             this.comboBoxDepartamentos.Name = "comboBoxDepartamentos";
@@ -233,6 +234,7 @@
             // 
             // comboBoxFuncoes
             // 
+            this.comboBoxFuncoes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFuncoes.FormattingEnabled = true;
             this.comboBoxFuncoes.Location = new System.Drawing.Point(418, 247);
             this.comboBoxFuncoes.Name = "comboBoxFuncoes";
@@ -259,14 +261,16 @@
             // 
             // comboBoxSituacao
             // 
+            this.comboBoxSituacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSituacao.FormattingEnabled = true;
             this.comboBoxSituacao.Items.AddRange(new object[] {
-            "CONTRATATO",
+            "CONTRATADO",
             "DEMITIDO"});
             this.comboBoxSituacao.Location = new System.Drawing.Point(418, 145);
             this.comboBoxSituacao.Name = "comboBoxSituacao";
             this.comboBoxSituacao.Size = new System.Drawing.Size(229, 21);
             this.comboBoxSituacao.TabIndex = 23;
+            this.comboBoxSituacao.SelectedIndexChanged += new System.EventHandler(this.comboBoxSituacao_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -319,6 +323,7 @@
             this.Name = "TelaCadastroFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastroFuncionarios";
+            this.Activated += new System.EventHandler(this.TelaCadastroFuncionarios_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

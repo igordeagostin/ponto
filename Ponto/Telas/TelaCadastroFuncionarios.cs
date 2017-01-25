@@ -21,6 +21,10 @@ namespace Ponto.Telas
             DepartamentoController deparamentoController = new DepartamentoController();
             comboBoxDepartamentos.DataSource = deparamentoController.Lista();
             comboBoxDepartamentos.DisplayMember = "Nome";
+            comboBoxDepartamentos.SelectedIndex = 0;
+
+            textBoxAdmissao.Enabled = false;
+            textBoxDemissao.Enabled = false;
         }
 
         public TelaCadastroFuncionarios(Funcionario funcionario)
@@ -33,6 +37,7 @@ namespace Ponto.Telas
             DepartamentoController deparamentoController = new DepartamentoController();
             comboBoxDepartamentos.DataSource = deparamentoController.Lista();
             comboBoxDepartamentos.DisplayMember = "Nome";
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -61,6 +66,27 @@ namespace Ponto.Telas
             FuncaoController funcaoController = new FuncaoController();
             comboBoxFuncoes.DataSource = funcaoController.funcaoPorDepartamento(comboBoxDepartamentos.Text);
             comboBoxFuncoes.DisplayMember = "Nome";
-        }     
+        }
+
+        private void TelaCadastroFuncionarios_Activated(object sender, EventArgs e)
+        {
+            FuncaoController funcaoController = new FuncaoController();
+            comboBoxFuncoes.DataSource = funcaoController.funcaoPorDepartamento(comboBoxDepartamentos.Text);
+            comboBoxFuncoes.DisplayMember = "Nome";
+        }
+
+        private void comboBoxSituacao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxSituacao.Text == "CONTRATADO")
+            {
+                textBoxAdmissao.Enabled = true;
+                textBoxDemissao.Enabled = false;
+            }
+            else if (comboBoxSituacao.Text == "DEMITIDO")
+            {
+                textBoxAdmissao.Enabled = false;
+                textBoxDemissao.Enabled = true;
+            }
+        }
     }
 }
