@@ -62,11 +62,11 @@ namespace Ponto.Telas
             dataGridViewFuncionarios.Columns[5].HeaderText = "C.H. DIÁRIA";
             dataGridViewFuncionarios.Columns[6].HeaderText = "C.H. SEMANAL";
             dataGridViewFuncionarios.Columns[7].HeaderText = "ADMISSÃO";
-            dataGridViewFuncionarios.Columns[7].HeaderText = "DEMISSÃO";
-            dataGridViewFuncionarios.Columns[7].HeaderText = "SITUAÇÃO";
-            dataGridViewFuncionarios.Columns[8].HeaderText = "FUNÇÃO";
-            dataGridViewFuncionarios.Columns[9].HeaderText = "DEPARTAMENTO";
-            dataGridViewFuncionarios.Columns[10].HeaderText = "HISTÓRICOS";
+            dataGridViewFuncionarios.Columns[8].HeaderText = "DEMISSÃO";
+            dataGridViewFuncionarios.Columns[9].HeaderText = "SITUAÇÃO";
+            dataGridViewFuncionarios.Columns[10].HeaderText = "FUNÇÃO";
+            dataGridViewFuncionarios.Columns[11].HeaderText = "DEPARTAMENTO";
+            dataGridViewFuncionarios.Columns[12].HeaderText = "HISTÓRICOS";
 
             //  Tamanho das colunas
 
@@ -76,7 +76,7 @@ namespace Ponto.Telas
             // Oculta colunas desnecessárias
             dataGridViewFuncionarios.Columns[3].Visible = false;
             dataGridViewFuncionarios.Columns[4].Visible = false;
-            dataGridViewFuncionarios.Columns[10].Visible = false;
+            dataGridViewFuncionarios.Columns[12].Visible = false;
 
         }
 

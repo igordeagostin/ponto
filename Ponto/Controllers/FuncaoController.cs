@@ -38,5 +38,10 @@ namespace Ponto.Controllers
             return funcaoDAO.Lista();
         }
 
+        public IList<Funcao> funcaoPorDepartamento(string nome)
+        {
+            return funcaoDAO.funcaoPorDepartamento(nome);
+        }
+
     }
 }

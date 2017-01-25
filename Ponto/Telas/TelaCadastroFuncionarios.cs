@@ -18,13 +18,21 @@ namespace Ponto.Telas
         public TelaCadastroFuncionarios()
         {
             InitializeComponent();
+            DepartamentoController deparamentoController = new DepartamentoController();
+            comboBoxDepartamentos.DataSource = deparamentoController.Lista();
+            comboBoxDepartamentos.DisplayMember = "Nome";
         }
 
         public TelaCadastroFuncionarios(Funcionario funcionario)
         {
             InitializeComponent();
+
             id = funcionario.Id;
-            textBoxNome.Text = funcionario.Nome;             
+            textBoxNome.Text = funcionario.Nome;
+
+            DepartamentoController deparamentoController = new DepartamentoController();
+            comboBoxDepartamentos.DataSource = deparamentoController.Lista();
+            comboBoxDepartamentos.DisplayMember = "Nome";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -42,5 +50,17 @@ namespace Ponto.Telas
             funcionarioController.addFuncionario(funcionario);
             Close();
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void comboBoxDepartamentos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FuncaoController funcaoController = new FuncaoController();
+            comboBoxFuncoes.DataSource = funcaoController.funcaoPorDepartamento(comboBoxDepartamentos.Text);
+            comboBoxFuncoes.DisplayMember = "Nome";
+        }     
     }
 }

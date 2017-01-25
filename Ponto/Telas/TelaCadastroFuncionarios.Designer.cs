@@ -36,7 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelAdmissao = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.textBoxCPF = new System.Windows.Forms.TextBox();
@@ -51,6 +51,10 @@
             this.comboBoxDepartamentos = new System.Windows.Forms.ComboBox();
             this.comboBoxFuncoes = new System.Windows.Forms.ComboBox();
             this.imageEdit1 = new DevExpress.XtraEditors.ImageEdit();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBoxSituacao = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxDemissao = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,20 +118,20 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(299, 113);
+            this.label7.Location = new System.Drawing.Point(299, 109);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 13);
             this.label7.TabIndex = 6;
             this.label7.Text = "Carga horária semanal:";
             // 
-            // label8
+            // labelAdmissao
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(299, 141);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Admissão:";
+            this.labelAdmissao.AutoSize = true;
+            this.labelAdmissao.Location = new System.Drawing.Point(299, 180);
+            this.labelAdmissao.Name = "labelAdmissao";
+            this.labelAdmissao.Size = new System.Drawing.Size(55, 13);
+            this.labelAdmissao.TabIndex = 7;
+            this.labelAdmissao.Text = "Admissão:";
             // 
             // label9
             // 
@@ -154,9 +158,9 @@
             // 
             // textBoxCHDiaria
             // 
-            this.textBoxCHDiaria.Location = new System.Drawing.Point(438, 72);
+            this.textBoxCHDiaria.Location = new System.Drawing.Point(418, 72);
             this.textBoxCHDiaria.Name = "textBoxCHDiaria";
-            this.textBoxCHDiaria.Size = new System.Drawing.Size(209, 20);
+            this.textBoxCHDiaria.Size = new System.Drawing.Size(229, 20);
             this.textBoxCHDiaria.TabIndex = 12;
             // 
             // textBoxSenha
@@ -168,30 +172,31 @@
             // 
             // textBoxAdmissao
             // 
-            this.textBoxAdmissao.Location = new System.Drawing.Point(438, 138);
+            this.textBoxAdmissao.Location = new System.Drawing.Point(418, 177);
             this.textBoxAdmissao.Name = "textBoxAdmissao";
-            this.textBoxAdmissao.Size = new System.Drawing.Size(209, 20);
+            this.textBoxAdmissao.Size = new System.Drawing.Size(80, 20);
             this.textBoxAdmissao.TabIndex = 14;
             // 
             // textBoxSemanal
             // 
-            this.textBoxSemanal.Location = new System.Drawing.Point(438, 106);
+            this.textBoxSemanal.Location = new System.Drawing.Point(418, 106);
             this.textBoxSemanal.Name = "textBoxSemanal";
-            this.textBoxSemanal.Size = new System.Drawing.Size(209, 20);
+            this.textBoxSemanal.Size = new System.Drawing.Size(229, 20);
             this.textBoxSemanal.TabIndex = 13;
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(572, 248);
+            this.buttonCancelar.Location = new System.Drawing.Point(572, 288);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
             this.buttonCancelar.TabIndex = 15;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(491, 248);
+            this.buttonSalvar.Location = new System.Drawing.Point(491, 288);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 23);
             this.buttonSalvar.TabIndex = 16;
@@ -202,7 +207,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(299, 173);
+            this.label10.Location = new System.Drawing.Point(299, 213);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 13);
             this.label10.TabIndex = 17;
@@ -211,7 +216,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(299, 210);
+            this.label11.Location = new System.Drawing.Point(299, 250);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(46, 13);
             this.label11.TabIndex = 18;
@@ -220,17 +225,18 @@
             // comboBoxDepartamentos
             // 
             this.comboBoxDepartamentos.FormattingEnabled = true;
-            this.comboBoxDepartamentos.Location = new System.Drawing.Point(438, 175);
+            this.comboBoxDepartamentos.Location = new System.Drawing.Point(418, 215);
             this.comboBoxDepartamentos.Name = "comboBoxDepartamentos";
-            this.comboBoxDepartamentos.Size = new System.Drawing.Size(209, 21);
+            this.comboBoxDepartamentos.Size = new System.Drawing.Size(229, 21);
             this.comboBoxDepartamentos.TabIndex = 19;
+            this.comboBoxDepartamentos.SelectedIndexChanged += new System.EventHandler(this.comboBoxDepartamentos_SelectedIndexChanged);
             // 
             // comboBoxFuncoes
             // 
             this.comboBoxFuncoes.FormattingEnabled = true;
-            this.comboBoxFuncoes.Location = new System.Drawing.Point(438, 207);
+            this.comboBoxFuncoes.Location = new System.Drawing.Point(418, 247);
             this.comboBoxFuncoes.Name = "comboBoxFuncoes";
-            this.comboBoxFuncoes.Size = new System.Drawing.Size(209, 21);
+            this.comboBoxFuncoes.Size = new System.Drawing.Size(229, 21);
             this.comboBoxFuncoes.TabIndex = 20;
             // 
             // imageEdit1
@@ -242,11 +248,51 @@
             this.imageEdit1.Size = new System.Drawing.Size(84, 20);
             this.imageEdit1.TabIndex = 21;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(299, 145);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 13);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Situação:";
+            // 
+            // comboBoxSituacao
+            // 
+            this.comboBoxSituacao.FormattingEnabled = true;
+            this.comboBoxSituacao.Items.AddRange(new object[] {
+            "CONTRATATO",
+            "DEMITIDO"});
+            this.comboBoxSituacao.Location = new System.Drawing.Point(418, 145);
+            this.comboBoxSituacao.Name = "comboBoxSituacao";
+            this.comboBoxSituacao.Size = new System.Drawing.Size(229, 21);
+            this.comboBoxSituacao.TabIndex = 23;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(504, 180);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Demissão:";
+            // 
+            // textBoxDemissao
+            // 
+            this.textBoxDemissao.Location = new System.Drawing.Point(566, 177);
+            this.textBoxDemissao.Name = "textBoxDemissao";
+            this.textBoxDemissao.Size = new System.Drawing.Size(80, 20);
+            this.textBoxDemissao.TabIndex = 25;
+            // 
             // TelaCadastroFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 287);
+            this.ClientSize = new System.Drawing.Size(659, 321);
+            this.Controls.Add(this.textBoxDemissao);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.comboBoxSituacao);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.imageEdit1);
             this.Controls.Add(this.comboBoxFuncoes);
             this.Controls.Add(this.comboBoxDepartamentos);
@@ -261,7 +307,7 @@
             this.Controls.Add(this.textBoxCPF);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labelAdmissao);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -271,6 +317,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadastroFuncionarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastroFuncionarios";
             ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -287,7 +334,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelAdmissao;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.TextBox textBoxCPF;
@@ -302,5 +349,9 @@
         private System.Windows.Forms.ComboBox comboBoxDepartamentos;
         private System.Windows.Forms.ComboBox comboBoxFuncoes;
         private DevExpress.XtraEditors.ImageEdit imageEdit1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBoxSituacao;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxDemissao;
     }
 }

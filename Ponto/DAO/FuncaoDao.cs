@@ -73,5 +73,13 @@ namespace LojaWeb.DAO
             //IList<Funcao> funcionarios = query.List<Funcao>();
             return query.List<Funcao>();
         }
+
+        public IList<Funcao> funcaoPorDepartamento(string nome)
+        {
+            String hql = "from Funcao f where f.Departamento.Nome = :nome";
+            IQuery query = session.CreateQuery(hql);
+            query.SetParameter("nome", nome);
+            return query.List<Funcao>();
+        }
     }
 }
